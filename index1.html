@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: Speak pro;
+            font-weight: 300;
+        }
+
+        body,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        p,
+        li,
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: darkslategrey;
+        }
+
+        body {
+            background-color: azure;
+        }
+
+        .wrapper {
+            width: 96%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2%;
+        }
+
+        header {
+            background-color: papayawhip;
+            padding: 10px 0;
+        }
+
+        .logo {
+            margin: 0;
+            background-image: url(instagram.png);
+            background-size: 70px 70px;
+            float: left;
+            width: 70px;
+            height: 70px;
+        }
+
+        header nav {
+            float: right;
+        }
+
+        header:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        header nav li {
+            list-style-type: none;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+
+        header nav li a {
+            text-decoration: none;
+            color: darkslategrey;
+            font-size: 15px;
+            text-transform: uppercase;
+
+        }
+
+        #usp {
+            margin-top: 60px;
+        }
+
+        #usp li {
+            float: left;
+            width: 23%;
+            text-align: center;
+            padding: 1%;
+            list-style-type: none;
+        }
+
+        #usp li img {
+            height: 120px;
+            padding: 10px;
+            background-color: aquamarine;
+            margin-left: auto;
+            margin-right: auto;
+            /*border-radius: 50%;*/
+            width: 50%;
+        }
+
+        #usp li h2 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        #usp:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #products{
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 2px solid lightgrey;
+        }
+        #products li{
+            float: left;
+            list-style-type: none;
+            width: 32%;
+            text-align: center;
+        }
+        #products li img{
+            width: 100%;
+        }
+        #products li:nth-child(even){
+            margin: 0 1%;
+        }
+        #products:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        #a{
+            text-align: center;
+            font-size: 36px;
+        }
+        #b{
+            font-size: 24px;
+        }
+        footer{
+            width: 100%;
+            margin-top: 60px;
+            background-color: darkslategrey;
+            padding: 30px 0;
+        }
+        footer ul{
+            float: left;
+            width: 48%;
+            margin: 1%;
+        }
+        footer ul h3{
+            font-size: 50px;
+            color: azure;
+        }
+        footer ul li{
+            font-size: 20px;
+            color: azure;
+            list-style-type: none;
+        }
+        footer:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .greet{
+            background-color: #48C9B0;
+            font-family: fantasy;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+    <!--JS codes-->
+     <script>
+        function myFunction(){
+            var name=prompt("What is your Name User","doe");
+            var msg;
+            var date= new Date();
+            var hour=date.getHours();
+
+            if(hour<12){
+                msg="Hello "+name+"! Good Morning";
+                document.getElementById("namesec").innerHTML=msg;
+            }
+          else  if(hour>12 && hour<16 ){
+                msg="Hello "+name+"  Good Afternoon";
+                document.getElementById("namesec").innerHTML=msg;
+            }
+            else  if(hour>16 && hour<23 ){
+                msg="Hello "+name+" Good Evening";
+                document.getElementById("namesec").innerHTML=msg;
+            }
+            else{
+                msg="Greetings Of The Day";
+                document.getElementById("namesec").innerHTML=msg;
+            }
+
+        }
+    </script>
+    <!--JS codes ends-->
+</head>
+
+<body>
+    <!--header starts-->
+    <header>
+        <div class="wrapper">
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li> <a href="#">HOME </a></li>
+                    <li> <a href="#">ABOUT US</a></li>
+                    <li> <a href="#">CONTACT US </a></li>
+                    <li> <a href="#">OUR CURRICULUM </a></li>
+                    <li> <a href="#">GALLERY</a></li>
+                    <li> <a href="#">PROMOTIONS</a></li>
+                    <li> <a href="#">DASHBOARD </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--header ends-->
+
+    <!--greet starts-->
+    <div class="greet">
+        <p id="namesec">
+
+        </p>
+    </div>
+    <!--greet ends-->
+
+
+
+    <!--usp starts-->
+    <div class="wrapper">
+        <section id="usp">
+            <ul type="square">
+                <li>
+                    <img src="link.png">
+                    <h2>WIDE RANGE OF LAPTOPS</h2>
+                </li>
+                <li>
+                    <img src="mall.png">
+                    <h2>VARIOUS TECH HUBS</h2>
+                </li>
+                <li>
+                    <img src="trophy.png">
+                    <h2>BEST BLOG</h2>
+                </li>
+                <li>
+                    <img src="customer.png">
+                    <h2>HAPPY <b>CUSTOMERS</b></h2>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+    <!--usp ends-->
+
+
+
+
+    <!--pro starts-->
+    <div class="wrapper">
+        <section id="products">
+            <h2 id="a">Our Products</h2>
+            <ul>
+                <li>
+                    <img src="4.jpg" alt="img">
+                    <h2 id="b"> PROPER CODING </h2>
+                    <p> WE GIVE PROPER OCDING AND TECHNOLOGICAL FACILITIES TO HELP EVERYONE CODE AND MAKE NEW
+                        APPS AND WEBSITES EVERYDAY.</p>
+                </li>
+                <li>
+                    <img src="5.jpg" alt="img">
+                    <h2 id="b">GIFTS</h2>
+                    <p> THERE ARE A HUGE AMOUNT OF GIFTS,CHALLENGES
+                        AND INTERESTING OFFERS ON THIS BLOG
+                    </p>
+                </li>
+                <li>
+                    <img src="6.jpg" alt="img">
+                    <h2 id="b"> AI</h2>
+                    <p> AI IS GIVEN GREAT INTEREST AND IMPORTANCE IN THIS BLOG</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <!--pro ends-->
+
+
+    <!--footer starts-->
+    <footer>
+        <div class="wrapper">
+            <ul>
+                <h3> GET IN TOUCH</h3>
+                <li> iCoder Blog</li>
+                <li> JOIN TODAY</li>
+                <li> Call Today- +91 9811115851</li>
+            </ul>
+            <iframe src="https://editor.p5js.org/agastyajain/embed/YIK0GNgPU" width="400" height="200"></iframe>
+            
+    </footer>
+    <!--footer ends-->
+  
+
+  
+
+
+
+
+
+</body>
+
+</html>
